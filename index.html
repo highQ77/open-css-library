@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" href="./favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Open Guideline Generator</title>
+  <link rel="stylesheet" href="./oc-layout.css">
+  <style>
+    body {
+      font-family: system-ui;
+      font-size: 12px;
+      color: #979179;
+      background: #EFEFEF;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      margin: 16px 0px;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px dashed rgba(0, 0, 0, .15);
+      margin: 32px 0px;
+    }
+
+    textarea {
+      opacity: .6;
+      border: 1px solid #979179;
+      outline: none;
+      padding: 10px;
+      margin: 16px 0px;
+      color: #979179;
+      width: 100%;
+      font-size: 12px;
+    }
+
+    .p {
+      padding: 24px 0px 12px 0px;
+    }
+  </style>
+</head>
+
+<body>
+  <div style="background-color: #979179;height: 4px;margin-bottom: 32px;"></div>
+  <div class="oc-area-limit">
+    <h1>Minimal Flex-Based Responsive CSS Layout System</h1>
+    <h4>Open CSS Library by William77</h4>
+  </div>
+
+  <hr>
+
+  <!-- example1 -->
+  <div class="oc-area-limit p">
+    ★ example1 - auto distribution / 自動分配
+  </div>
+  <div class="oc-area oc-area-limit">
+    <div>A</div>
+    <div>B</div>
+    <div>C</div>
+  </div>
+
+
+  <div class="oc-area-limit">
+    <textarea>
+      <div class="oc-area oc-area-limit">
+        <div>A</div>
+        <div>B</div>
+        <div>C</div>
+      </div>
+    </textarea>
+  </div>
+
+  <!-- example2 -->
+  <div class="oc-area-limit p">
+    ★ example2 - custom distribution / 自定義分配
+  </div>
+  <div class="oc-area oc-area-limit">
+    <div class="oc-1">1/12</div>
+    <div class="oc-10">10/12</div>
+    <div class="oc-1">1/12</div>
+  </div>
+
+  <div class="oc-area-limit">
+    <textarea>
+      <div class="oc-area oc-area-limit">
+        <div class="oc-1">1/12</div>
+        <div class="oc-10">10/12</div>
+        <div class="oc-1">1/12</div>
+      </div>
+    </textarea>
+  </div>
+
+  <!-- example3 -->
+  <div class="oc-area-limit p">
+    ★ example3 - split 12 parts / 12欄分配
+  </div>
+  <div class="oc-area oc-area-limit">
+    <div class="oc-1">1/12</div>
+    <div class="oc-1">1/12</div>
+    <div class="oc-1">1/12</div>
+    <div class="oc-1">1/12</div>
+    <div class="oc-1">1/12</div>
+    <div class="oc-1">1/12</div>
+    <div class="oc-1">1/12</div>
+    <div class="oc-1">1/12</div>
+    <div class="oc-1">1/12</div>
+    <div class="oc-1">1/12</div>
+    <div class="oc-1">1/12</div>
+    <div class="oc-1">1/12</div>
+  </div>
+
+  <div class="oc-area-limit">
+    <textarea>
+      <div class="oc-area oc-area-limit">
+        <div class="oc-1">1/12</div>
+        <div class="oc-1">1/12</div>
+        <div class="oc-1">1/12</div>
+        <div class="oc-1">1/12</div>
+        <div class="oc-1">1/12</div>
+        <div class="oc-1">1/12</div>
+        <div class="oc-1">1/12</div>
+        <div class="oc-1">1/12</div>
+        <div class="oc-1">1/12</div>
+        <div class="oc-1">1/12</div>
+        <div class="oc-1">1/12</div>
+        <div class="oc-1">1/12</div>
+      </div> 
+    </textarea>
+  </div>
+
+  <!-- example4 -->
+  <div class="oc-area-limit p">
+    ★ example4 - rwd settings / 響應式設計
+  </div>
+  <div class="oc-area oc-area-limit">
+    <div class="oc-sm-12 oc-md-6 oc-lg-4">oc-sm-12 oc-md-6 oc-lg-4</div>
+    <div class="oc-sm-12 oc-md-3 oc-lg-4">oc-sm-12 oc-md-3 oc-lg-4</div>
+    <div class="oc-sm-12 oc-md-3 oc-lg-4">oc-sm-12 oc-md-3 oc-lg-4</div>
+  </div>
+
+  <div class="oc-area-limit">
+    <textarea>
+      <div class="oc-area oc-area-limit">
+        <div class="oc-sm-12 oc-md-6 oc-lg-4">oc-sm-12 oc-md-6 oc-lg-4</div>
+        <div class="oc-sm-12 oc-md-3 oc-lg-4">oc-sm-12 oc-md-3 oc-lg-4</div>
+        <div class="oc-sm-12 oc-md-3 oc-lg-4">oc-sm-12 oc-md-3 oc-lg-4</div>
+      </div>
+    </textarea>
+  </div>
+
+  <!-- example5 -->
+  <div class="oc-area-limit p">
+    ★ example5 - alignment / 對齊
+  </div>
+  <div class="oc-area oc-area-limit">
+    <div class="oc-center" style="height:120px">oc-center</div>
+    <div class="oc-right">oc-right</div>
+    <div class="oc-middle">oc-middle</div>
+    <div class="oc-center oc-middle">oc-center oc-middle</div>
+    <div class="oc-bottom">oc-bottom</div>
+    <div class="oc-bottom oc-center">oc-bottom oc-center</div>
+    <div class="oc-bottom oc-right">oc-bottom oc-right</div>
+  </div>
+
+  <div class="oc-area-limit">
+    <textarea>
+      <div class="oc-area oc-area-limit">
+        <div class="oc-center" style="height:120px">oc-center</div>
+        <div class="oc-right">oc-right</div>
+        <div class="oc-middle">oc-middle</div>
+        <div class="oc-center oc-middle">oc-center oc-middle</div>
+        <div class="oc-bottom">oc-bottom</div>
+        <div class="oc-bottom oc-center">oc-bottom oc-center</div>
+        <div class="oc-bottom oc-right">oc-bottom oc-right</div>
+      </div>
+    </textarea>
+  </div>
+
+  <!-- example6 -->
+  <div class="oc-area-limit p">
+    ★ example6 - custom width / 自定義欄寬
+  </div>
+  <div class="oc-area oc-area-limit">
+    <div style="max-width: 200px;">200px</div>
+    <div style="width: auto;">auto</div>
+    <div style="max-width: 200px;">200px</div>
+  </div>
+
+  <div class="oc-area-limit">
+    <textarea>
+      <div class="oc-area oc-area-limit">
+        <div style="max-width: 200px;">200px</div>
+        <div style="width: auto;">auto</div>
+        <div style="max-width: 200px;">200px</div>
+      </div>
+    </textarea>
+  </div>
+
+  <!-- example7 -->
+  <div class="oc-area-limit p">
+    ★ example7 - nest structure / 巢狀結構
+  </div>
+  <div class="oc-area oc-area-limit">
+    <div class="oc-area oc-6">
+      <div class="oc-4">oc-4</div>
+      <div class="oc-4">oc-4</div>
+      <div class="oc-4">oc-4</div>
+    </div>
+    <div class="oc-6">6/12</div>
+  </div>
+
+  <div class="oc-area-limit">
+    <textarea>
+      <div class="oc-area oc-area-limit">
+        <div class="oc-area oc-6">
+          <div class="oc-4">oc-4</div>
+          <div class="oc-4">oc-4</div>
+          <div class="oc-4">oc-4</div>
+        </div>
+        <div class="oc-6">6/12</div>
+      </div>
+    </textarea>
+  </div>
+
+
+  <hr style="margin: 56px 0;">
+
+
+  <h3 class="oc-center">Minimal Flex-Based Responsive CSS Layout System</h3>
+  <div class="oc-center" style="margin-bottom: 56px;">Design by William77. 2024</div>
+
+
+  <script>
+    [...document.getElementsByTagName('textarea')].forEach(tt => {
+      let s = tt.value.indexOf('<')
+      let t = tt.value.split('\n').map(item => item.slice(s)).filter(item => item != '')
+      tt.rows = t.length
+      tt.value = t.join('\n')
+    })
+  </script>
+</body>
+
+</html>

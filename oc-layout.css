@@ -1,0 +1,346 @@
+/* design by william77 */
+
+:root {
+    /* set oc-area children element bg-color, use empty string in production */
+    --oc-layout-bg-color: rgba(0, 0, 0, .05);
+    /* set oc-area children element border, use empty string in production */
+    --oc-layout-border: 1px solid rgba(0, 0, 0, .1);
+    /* row and column gutter */
+    --oc-layout-gutter: 5px;
+}
+
+@media (min-width: 1200px) {
+
+    /* you can change 1200px to other value*/
+    .oc-area-limit {
+        margin: 0 calc((100% - 1200px) / 2);
+    }
+}
+
+html,
+body {
+    box-sizing: border-box;
+}
+
+html *,
+html *:before,
+html *:after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+.oc-area {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: var(--oc-layout-gutter);
+    row-gap: var(--oc-layout-gutter);
+    justify-content: space-between;
+}
+
+.oc-area>* {
+    flex-direction: row;
+    --oc-cell-width: auto;
+    flex-basis: var(--oc-cell-width);
+    flex-grow: 1;
+    flex-shrink: 1;
+    background-color: var(--oc-layout-bg-color);
+    border: var(--oc-layout-border);
+    max-width: var(--oc-cell-width);
+}
+
+.oc-area>*:empty {
+    flex-direction: column;
+}
+
+.oc-left {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.oc-center {
+    display: flex;
+    justify-content: center;
+}
+
+.oc-right {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.oc-top {
+    display: flex;
+    align-items: flex-start;
+}
+
+.oc-middle {
+    display: flex;
+    align-items: center;
+}
+
+.oc-bottom {
+    display: flex;
+    align-items: flex-end;
+}
+
+.oc-area>*:first-child:nth-last-child(1) {
+    /* -or- li:only-child { */
+    width: 100%;
+}
+
+.oc-area>*:first-child:nth-last-child(2),
+.oc-area>*:first-child:nth-last-child(2)~* {
+    width: calc((100% - var(--oc-layout-gutter) * 1) / 2);
+}
+
+.oc-area>*:first-child:nth-last-child(3),
+.oc-area>*:first-child:nth-last-child(3)~* {
+    width: calc((100% - var(--oc-layout-gutter) * 2) / 3);
+}
+
+.oc-area>*:first-child:nth-last-child(4),
+.oc-area>*:first-child:nth-last-child(4)~* {
+    width: calc((100% - var(--oc-layout-gutter) * 3) / 4);
+}
+
+.oc-area>*:first-child:nth-last-child(5),
+.oc-area>*:first-child:nth-last-child(5)~* {
+    width: calc((100% - var(--oc-layout-gutter) * 4) / 5);
+}
+
+.oc-area>*:first-child:nth-last-child(6),
+.oc-area>*:first-child:nth-last-child(6)~* {
+    width: calc((100% - var(--oc-layout-gutter) * 5) / 6);
+}
+
+.oc-area>*:first-child:nth-last-child(7),
+.oc-area>*:first-child:nth-last-child(7)~* {
+    width: calc((100% - var(--oc-layout-gutter) * 6) / 7);
+}
+
+.oc-area>*:first-child:nth-last-child(8),
+.oc-area>*:first-child:nth-last-child(8)~* {
+    width: calc((100% - var(--oc-layout-gutter) * 7) / 8);
+}
+
+.oc-area>*:first-child:nth-last-child(9),
+.oc-area>*:first-child:nth-last-child(9)~* {
+    width: calc((100% - var(--oc-layout-gutter) * 8) / 9);
+}
+
+.oc-area>*:first-child:nth-last-child(10),
+.oc-area>*:first-child:nth-last-child(10)~* {
+    width: calc((100% - var(--oc-layout-gutter) * 9) / 10);
+}
+
+.oc-area>*:first-child:nth-last-child(11),
+.oc-area>*:first-child:nth-last-child(11)~* {
+    width: calc((100% - var(--oc-layout-gutter) * 10) / 11);
+}
+
+.oc-area>*:first-child:nth-last-child(12),
+.oc-area>*:first-child:nth-last-child(12)~* {
+    width: calc((100% - var(--oc-layout-gutter) * 11) / 12);
+}
+
+@media (max-width: 576px) {
+    .oc-area>.oc-sm-12 {
+        --oc-cell-width: calc(100.000%);
+    }
+
+    .oc-area>.oc-sm-11 {
+        --oc-cell-width: calc(91.666% - var(--oc-layout-gutter));
+    }
+
+    .oc-area>.oc-sm-10 {
+        --oc-cell-width: calc(83.333% - var(--oc-layout-gutter));
+    }
+
+    .oc-area>.oc-sm-9 {
+        --oc-cell-width: calc(75.000% - var(--oc-layout-gutter));
+    }
+
+    .oc-area>.oc-sm-8 {
+        --oc-cell-width: calc(66.666% - var(--oc-layout-gutter));
+    }
+
+    .oc-area>.oc-sm-7 {
+        --oc-cell-width: calc(58.333% - var(--oc-layout-gutter));
+    }
+
+    .oc-area>.oc-sm-6 {
+        --oc-cell-width: calc(50.000% - var(--oc-layout-gutter));
+    }
+
+    .oc-area>.oc-sm-5 {
+        --oc-cell-width: calc(41.666% - var(--oc-layout-gutter));
+    }
+
+    .oc-area>.oc-sm-4 {
+        --oc-cell-width: calc(33.333% - var(--oc-layout-gutter));
+    }
+
+    .oc-area>.oc-sm-3 {
+        --oc-cell-width: calc(25.000% - var(--oc-layout-gutter));
+    }
+
+    .oc-area>.oc-sm-2 {
+        --oc-cell-width: calc(16.666% - var(--oc-layout-gutter));
+    }
+
+    .oc-area>.oc-sm-1 {
+        --oc-cell-width: calc(8.333% - var(--oc-layout-gutter));
+    }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+    .oc-area>.oc-md-12 {
+        --oc-cell-width: calc(100.000%);
+    }
+
+    .oc-area>.oc-md-11 {
+        --oc-cell-width: calc(91.666% - var(--oc-layout-gutter));
+    }
+
+    .oc-area>.oc-md-10 {
+        --oc-cell-width: calc(83.333% - var(--oc-layout-gutter));
+    }
+
+    .oc-area>.oc-md-9 {
+        --oc-cell-width: calc(75.000% - var(--oc-layout-gutter));
+    }
+
+    .oc-area>.oc-md-8 {
+        --oc-cell-width: calc(66.666% - var(--oc-layout-gutter));
+    }
+
+    .oc-area>.oc-md-7 {
+        --oc-cell-width: calc(58.333% - var(--oc-layout-gutter));
+    }
+
+    .oc-area>.oc-md-6 {
+        --oc-cell-width: calc(50.000% - var(--oc-layout-gutter));
+    }
+
+    .oc-area>.oc-md-5 {
+        --oc-cell-width: calc(41.666% - var(--oc-layout-gutter));
+    }
+
+    .oc-area>.oc-md-4 {
+        --oc-cell-width: calc(33.333% - var(--oc-layout-gutter));
+    }
+
+    .oc-area>.oc-md-3 {
+        --oc-cell-width: calc(25.000% - var(--oc-layout-gutter));
+    }
+
+    .oc-area>.oc-md-2 {
+        --oc-cell-width: calc(16.666% - var(--oc-layout-gutter));
+    }
+
+    .oc-area>.oc-md-1 {
+        --oc-cell-width: calc(8.333% - var(--oc-layout-gutter));
+    }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+    .oc-area>.oc-lg-12 {
+        --oc-cell-width: calc(100.000%);
+    }
+
+    .oc-area>.oc-lg-11 {
+        --oc-cell-width: calc(91.666% - var(--oc-layout-gutter));
+    }
+
+    .oc-area>.oc-lg-10 {
+        --oc-cell-width: calc(83.333% - var(--oc-layout-gutter));
+    }
+
+    .oc-area>.oc-lg-9 {
+        --oc-cell-width: calc(75.000% - var(--oc-layout-gutter));
+    }
+
+    .oc-area>.oc-lg-8 {
+        --oc-cell-width: calc(66.666% - var(--oc-layout-gutter));
+    }
+
+    .oc-area>.oc-lg-7 {
+        --oc-cell-width: calc(58.333% - var(--oc-layout-gutter));
+    }
+
+    .oc-area>.oc-lg-6 {
+        --oc-cell-width: calc(50.000% - var(--oc-layout-gutter));
+    }
+
+    .oc-area>.oc-lg-5 {
+        --oc-cell-width: calc(41.666% - var(--oc-layout-gutter));
+    }
+
+    .oc-area>.oc-lg-4 {
+        --oc-cell-width: calc(33.333% - var(--oc-layout-gutter));
+    }
+
+    .oc-area>.oc-lg-3 {
+        --oc-cell-width: calc(25.000% - var(--oc-layout-gutter));
+    }
+
+    .oc-area>.oc-lg-2 {
+        --oc-cell-width: calc(16.666% - var(--oc-layout-gutter));
+    }
+
+    .oc-area>.oc-lg-1 {
+        --oc-cell-width: calc(8.333% - var(--oc-layout-gutter));
+    }
+}
+
+@media (min-width: 0px) {
+
+    .oc-area>.oc-12 {
+        --oc-cell-width: calc(100.000%);
+    }
+
+    .oc-area>.oc-11 {
+        --oc-cell-width: calc(91.666% - var(--oc-layout-gutter));
+    }
+
+    .oc-area>.oc-10 {
+        --oc-cell-width: calc(83.333% - var(--oc-layout-gutter));
+    }
+
+    .oc-area>.oc-9 {
+        --oc-cell-width: calc(75.000% - var(--oc-layout-gutter));
+    }
+
+    .oc-area>.oc-8 {
+        --oc-cell-width: calc(66.666% - var(--oc-layout-gutter));
+    }
+
+    .oc-area>.oc-7 {
+        --oc-cell-width: calc(58.333% - var(--oc-layout-gutter));
+    }
+
+    .oc-area>.oc-6 {
+        --oc-cell-width: calc(50.000% - var(--oc-layout-gutter));
+    }
+
+    .oc-area>.oc-5 {
+        --oc-cell-width: calc(41.666% - var(--oc-layout-gutter));
+    }
+
+    .oc-area>.oc-4 {
+        --oc-cell-width: calc(33.333% - var(--oc-layout-gutter));
+    }
+
+    .oc-area>.oc-3 {
+        --oc-cell-width: calc(25.000% - var(--oc-layout-gutter));
+    }
+
+    .oc-area>.oc-2 {
+        --oc-cell-width: calc(16.666% - var(--oc-layout-gutter));
+    }
+
+    .oc-area>.oc-1 {
+        --oc-cell-width: calc(8.333% - var(--oc-layout-gutter));
+    }
+}
