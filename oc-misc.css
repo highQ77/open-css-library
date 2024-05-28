@@ -1,0 +1,60 @@
+button {
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: .8;
+}
+
+img {
+    vertical-align: middle;
+}
+
+.oc-float-left {
+    float: left;
+}
+
+.oc-float-right {
+    float: right;
+}
+
+.oc-w-100 {
+    width: 100%;
+}
+
+.oc-inline-block {
+    display: inline-block;
+}
+
+.oc-block {
+    display: block;
+}
+
+.oc-inline {
+    display: inline;
+}
+
+.oc-none {
+    display: none;
+}
+
+.oc-pos-relative {
+    position: relative;
+}
+
+.oc-pos-absolute {
+    position: absolute;
+}
+
+.oc-pos-fixed {
+    position: fixed;
+}
+
+.oc-cursor {
+    cursor: pointer;
+}
+
+hr {
+    border: none;
+    border-top: .1px solid #666;
+}
