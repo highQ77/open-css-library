@@ -429,6 +429,15 @@
       ]
     }
 
+    function resetColor() {
+      const colorContainer = document.getElementById('oc-colors');
+      default_colors = {}
+      const allColor = [...colorContainer.getElementsByClassName('color-palette')];
+      allColor.forEach((color, index) => {
+        default_colors[color.getElementsByClassName('color-name')[0].value] = color.getElementsByClassName('color-val')[0].value
+      })
+    }
+
     function init() {
 
       document.getElementById('oc-spacing').value = default_spacing.join(', ')
@@ -697,6 +706,7 @@
     }
 
     function generate() {
+      resetColor()
       const demoArea = document.getElementById('demo-area')
       demoArea.innerHTML = ''
       let commonStyle = 'margin:16px 0; border-bottom: .1px solid #979179;'
