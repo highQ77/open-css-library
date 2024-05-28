@@ -24,100 +24,120 @@
       margin: 16px 0px;
     }
 
+    button {
+      color: #979179;
+      border-radius: 2px;
+      border: .5px solid #979179 !important;
+      border-bottom: 2px solid #979179 !important;
+      font-size: 12px;
+      cursor: pointer;
+    }
+
     hr {
       border: none;
       border-top: 1px dashed rgba(0, 0, 0, .15);
       margin: 32px 0px;
     }
 
-    textarea {
+    textarea,
+    input {
+      font-size: 12px;
       opacity: .6;
+      background-color: white;
       border: 1px solid #979179;
       outline: none;
       padding: 10px;
-      margin: 16px 0px;
-      color: #979179;
+      margin: 8px 0px;
+      color: #7d7a6e;
       width: 100%;
-      font-size: 12px;
     }
 
     .p {
       padding: 24px 0px 12px 0px;
     }
+
+    .river {
+      background-color: #3d3b34;
+      height: 120px;
+      box-shadow: inset 0 0 10px black;
+    }
   </style>
 </head>
 
 <body>
-  <div style="background-color: #979179;height: 4px;margin-bottom: 32px;"></div>
-  <div class="oc-area-limit">
-    <h1>Minimal Flex-Based Responsive CSS Layout System</h1>
-    <h4>Open CSS Library by William77</h4>
-  </div>
 
-  <hr>
+  <div id="oc-layout">
 
-  <!-- example1 -->
-  <div class="oc-area-limit p">
-    ★ example1 - auto distribution / 自動分配
-  </div>
-  <div class="oc-area oc-area-limit">
-    <div>A</div>
-    <div>B</div>
-    <div>C</div>
-  </div>
+    <div style="background-color: #979179;height: 4px;margin-bottom: 32px;"></div>
+    <div class="oc-area-limit">
+      <h1>Minimal Flex-Based Responsive CSS Layout System</h1>
+      <h4>Open CSS Library by William77</h4>
+    </div>
+
+    <hr>
+
+    <!-- example1 -->
+    <div class="oc-area-limit p">
+      ★ example1 - auto distribution / 自動分配
+    </div>
+    <div class="oc-area oc-area-limit">
+      <div>A</div>
+      <div>B</div>
+      <div>C</div>
+    </div>
 
 
-  <div class="oc-area-limit">
-    <textarea>
+    <div class="oc-area-limit">
+      <textarea>
       <div class="oc-area oc-area-limit">
         <div>A</div>
         <div>B</div>
         <div>C</div>
       </div>
     </textarea>
-  </div>
+    </div>
 
-  <!-- example2 -->
-  <div class="oc-area-limit p">
-    ★ example2 - custom distribution / 自定義分配
-  </div>
-  <div class="oc-area oc-area-limit">
-    <div class="oc-1">1/12</div>
-    <div class="oc-10">10/12</div>
-    <div class="oc-1">1/12</div>
-  </div>
+    <!-- example2 -->
+    <div class="oc-area-limit p">
+      ★ example2 - custom distribution / 自定義分配
+    </div>
+    <div class="oc-area oc-area-limit">
+      <div class="oc-1">1/12</div>
+      <div class="oc-10">10/12</div>
+      <div class="oc-1">1/12</div>
+    </div>
 
-  <div class="oc-area-limit">
-    <textarea>
+    <div class="oc-area-limit">
+      <textarea>
       <div class="oc-area oc-area-limit">
         <div class="oc-1">1/12</div>
         <div class="oc-10">10/12</div>
         <div class="oc-1">1/12</div>
       </div>
     </textarea>
-  </div>
+    </div>
 
-  <!-- example3 -->
-  <div class="oc-area-limit p">
-    ★ example3 - split 12 parts / 12欄分配
-  </div>
-  <div class="oc-area oc-area-limit">
-    <div class="oc-1">1/12</div>
-    <div class="oc-1">1/12</div>
-    <div class="oc-1">1/12</div>
-    <div class="oc-1">1/12</div>
-    <div class="oc-1">1/12</div>
-    <div class="oc-1">1/12</div>
-    <div class="oc-1">1/12</div>
-    <div class="oc-1">1/12</div>
-    <div class="oc-1">1/12</div>
-    <div class="oc-1">1/12</div>
-    <div class="oc-1">1/12</div>
-    <div class="oc-1">1/12</div>
-  </div>
+    <!-- example3 -->
+    <div class="oc-area-limit p">
+      ★ example3 - split 12 parts / 12欄分配
+    </div>
+    <div class="oc-area oc-area-limit">
+      <div class="oc-1">1/12</div>
+      <div class="oc-1">1/12</div>
+      <div class="oc-1">1/12</div>
+      <div class="oc-1">1/12</div>
+      <div class="oc-1">1/12</div>
+      <div class="oc-1">1/12</div>
+      <div class="oc-1">1/12</div>
+      <div class="oc-1">1/12</div>
+      <div class="oc-1">1/12</div>
+      <div class="oc-1">1/12</div>
+      <div class="oc-1">1/12</div>
+      <div class="oc-1">1/12</div>
+    </div>
 
-  <div class="oc-area-limit">
-    <textarea>
+    <div class="oc-area-limit">
+      <textarea>
       <div class="oc-area oc-area-limit">
         <div class="oc-1">1/12</div>
         <div class="oc-1">1/12</div>
@@ -133,44 +153,44 @@
         <div class="oc-1">1/12</div>
       </div> 
     </textarea>
-  </div>
+    </div>
 
-  <!-- example4 -->
-  <div class="oc-area-limit p">
-    ★ example4 - rwd settings / 響應式設計
-  </div>
-  <div class="oc-area oc-area-limit">
-    <div class="oc-sm-12 oc-md-6 oc-lg-4">oc-sm-12 oc-md-6 oc-lg-4</div>
-    <div class="oc-sm-12 oc-md-3 oc-lg-4">oc-sm-12 oc-md-3 oc-lg-4</div>
-    <div class="oc-sm-12 oc-md-3 oc-lg-4">oc-sm-12 oc-md-3 oc-lg-4</div>
-  </div>
+    <!-- example4 -->
+    <div class="oc-area-limit p">
+      ★ example4 - rwd settings / 響應式設計
+    </div>
+    <div class="oc-area oc-area-limit">
+      <div class="oc-sm-12 oc-md-6 oc-lg-4">oc-sm-12 oc-md-6 oc-lg-4</div>
+      <div class="oc-sm-12 oc-md-3 oc-lg-4">oc-sm-12 oc-md-3 oc-lg-4</div>
+      <div class="oc-sm-12 oc-md-3 oc-lg-4">oc-sm-12 oc-md-3 oc-lg-4</div>
+    </div>
 
-  <div class="oc-area-limit">
-    <textarea>
+    <div class="oc-area-limit">
+      <textarea>
       <div class="oc-area oc-area-limit">
         <div class="oc-sm-12 oc-md-6 oc-lg-4">oc-sm-12 oc-md-6 oc-lg-4</div>
         <div class="oc-sm-12 oc-md-3 oc-lg-4">oc-sm-12 oc-md-3 oc-lg-4</div>
         <div class="oc-sm-12 oc-md-3 oc-lg-4">oc-sm-12 oc-md-3 oc-lg-4</div>
       </div>
     </textarea>
-  </div>
+    </div>
 
-  <!-- example5 -->
-  <div class="oc-area-limit p">
-    ★ example5 - alignment / 對齊
-  </div>
-  <div class="oc-area oc-area-limit">
-    <div class="oc-center" style="height:120px">oc-center</div>
-    <div class="oc-right">oc-right</div>
-    <div class="oc-middle">oc-middle</div>
-    <div class="oc-center oc-middle">oc-center oc-middle</div>
-    <div class="oc-bottom">oc-bottom</div>
-    <div class="oc-bottom oc-center">oc-bottom oc-center</div>
-    <div class="oc-bottom oc-right">oc-bottom oc-right</div>
-  </div>
+    <!-- example5 -->
+    <div class="oc-area-limit p">
+      ★ example5 - alignment / 對齊
+    </div>
+    <div class="oc-area oc-area-limit">
+      <div class="oc-center" style="height:120px">oc-center</div>
+      <div class="oc-right">oc-right</div>
+      <div class="oc-middle">oc-middle</div>
+      <div class="oc-center oc-middle">oc-center oc-middle</div>
+      <div class="oc-bottom">oc-bottom</div>
+      <div class="oc-bottom oc-center">oc-bottom oc-center</div>
+      <div class="oc-bottom oc-right">oc-bottom oc-right</div>
+    </div>
 
-  <div class="oc-area-limit">
-    <textarea>
+    <div class="oc-area-limit">
+      <textarea>
       <div class="oc-area oc-area-limit">
         <div class="oc-center" style="height:120px">oc-center</div>
         <div class="oc-right">oc-right</div>
@@ -181,43 +201,43 @@
         <div class="oc-bottom oc-right">oc-bottom oc-right</div>
       </div>
     </textarea>
-  </div>
+    </div>
 
-  <!-- example6 -->
-  <div class="oc-area-limit p">
-    ★ example6 - custom width / 自定義欄寬
-  </div>
-  <div class="oc-area oc-area-limit">
-    <div style="max-width: 200px;">200px</div>
-    <div style="width: auto;">auto</div>
-    <div style="max-width: 200px;">200px</div>
-  </div>
+    <!-- example6 -->
+    <div class="oc-area-limit p">
+      ★ example6 - custom width / 自定義欄寬
+    </div>
+    <div class="oc-area oc-area-limit">
+      <div style="max-width: 200px;">200px</div>
+      <div style="width: auto;">auto</div>
+      <div style="max-width: 200px;">200px</div>
+    </div>
 
-  <div class="oc-area-limit">
-    <textarea>
+    <div class="oc-area-limit">
+      <textarea>
       <div class="oc-area oc-area-limit">
         <div style="max-width: 200px;">200px</div>
         <div style="width: auto;">auto</div>
         <div style="max-width: 200px;">200px</div>
       </div>
     </textarea>
-  </div>
-
-  <!-- example7 -->
-  <div class="oc-area-limit p">
-    ★ example7 - nest structure / 巢狀結構
-  </div>
-  <div class="oc-area oc-area-limit">
-    <div class="oc-area oc-6">
-      <div class="oc-4">oc-4</div>
-      <div class="oc-4">oc-4</div>
-      <div class="oc-4">oc-4</div>
     </div>
-    <div class="oc-6">6/12</div>
-  </div>
 
-  <div class="oc-area-limit">
-    <textarea>
+    <!-- example7 -->
+    <div class="oc-area-limit p">
+      ★ example7 - nest structure / 巢狀結構
+    </div>
+    <div class="oc-area oc-area-limit">
+      <div class="oc-area oc-6">
+        <div class="oc-4">oc-4</div>
+        <div class="oc-4">oc-4</div>
+        <div class="oc-4">oc-4</div>
+      </div>
+      <div class="oc-6">6/12</div>
+    </div>
+
+    <div class="oc-area-limit">
+      <textarea>
       <div class="oc-area oc-area-limit">
         <div class="oc-area oc-6">
           <div class="oc-4">oc-4</div>
@@ -227,23 +247,573 @@
         <div class="oc-6">6/12</div>
       </div>
     </textarea>
+    </div>
+
+
+    <hr style="margin: 56px 0;">
+
+
+    <h3 class="oc-center">Minimal Flex-Based Responsive CSS Layout System</h3>
+    <div class="oc-center" style="margin-bottom: 56px;">Design by William77. 2024</div>
+
+
   </div>
-
-
-  <hr style="margin: 56px 0;">
-
-
-  <h3 class="oc-center">Minimal Flex-Based Responsive CSS Layout System</h3>
-  <div class="oc-center" style="margin-bottom: 56px;">Design by William77. 2024</div>
-
-
   <script>
+    // [ Format Textarea ] ===============================================================
     [...document.getElementsByTagName('textarea')].forEach(tt => {
       let s = tt.value.indexOf('<')
       let t = tt.value.split('\n').map(item => item.slice(s)).filter(item => item != '')
       tt.rows = t.length
       tt.value = t.join('\n')
     })
+  </script>
+
+  <div class="river"></div>
+
+  <div id="oc-guideline">
+
+    <div style="background-color: #979179;height: 4px;margin-bottom: 32px;"></div>
+    <div class="oc-area-limit">
+      <h1>Design Guideline Generator</h1>
+      <h4>Open CSS Library by William77</h4>
+    </div>
+
+    <hr>
+
+    <!-- 1. spacing -->
+    <div class="oc-area-limit p">
+      ★ spacing - margin & padding / 外距與內距
+    </div>
+    <div class="oc-area-limit">
+      <input id="oc-spacing" type="text" />
+    </div>
+
+
+    <!-- 2. thick -->
+    <div class="oc-area-limit p">
+      ★ thick - border & outline / 邊框與外邊框
+    </div>
+    <div class="oc-area-limit">
+      <input id="oc-thick" type="text" />
+    </div>
+
+    <!-- 3. site colors -->
+    <div class="oc-area-limit p">
+      ★ colors - site color palette / 網站色票
+    </div>
+    <div class="oc-area-limit" style="margin-bottom: 16px;">
+      <button id="new-color" style="padding: 4px 16px;">Add New Color +</button>
+    </div>
+    <div id="oc-colors" class="oc-area oc-area-limit">
+      <div class="color-palette oc-4 oc-area" style="background-color: white;border:1px solid rgba(0, 0, 0, .15);">
+        <div class="color-display oc-1" style="background-color: black;"></div>
+        <input class="color-name oc-5" type="text" value="primary1"
+          style="margin: 0; padding: 8px; border-right: 1px solid rgba(0, 0, 0, .15);" />
+        <input class="color-val oc-5" type="text" value="rgb(1,2,3)" style="margin: 0;padding: 8px;" />
+        <button class="color-x oc-1 oc-center oc-middle" style="cursor: pointer;">x</button>
+      </div>
+    </div>
+
+    <!-- 4. font heading -->
+    <div class="oc-area-limit p">
+      ★ font - h1 ~ h6 / 標題字級
+    </div>
+    <div class="oc-area-limit">
+      <input id="oc-heading" type="text" />
+    </div>
+
+    <!-- 5. font custom size -->
+    <div class="oc-area-limit p">
+      ★ font - custom size / 自定義字體尺寸
+    </div>
+    <div class="oc-area-limit">
+      <input id="oc-font-size" type="text" />
+    </div>
+
+    <!-- 6. font family -->
+    <div class="oc-area-limit p">
+      ★ font - font family / 字型
+    </div>
+    <div class="oc-area-limit">
+      <input id="oc-font-family" type="text" />
+      <div style="margin: 8px 0;"></div>
+      <div id="all-font-family" class="oc-area">
+        <button class="oc-2 family oc-center" style="min-width: 150px; font-size: 13px; cursor: pointer;"></button>
+      </div>
+    </div>
+
+    <!-- 7. generate area -->
+    <div class="oc-area-limit" style="text-align: center; margin-top: 80px; margin-bottom: 80px;">
+      <button id="generate" style="padding: 4px 16px;">Preview Guideline</button>
+      <button style="padding: 4px 16px;" onclick="downloadCSS()">Download CSS</button>
+    </div>
+    <div id="demo-area" class="oc-area-limit"></div>
+
+    <hr style="margin: 56px 0;">
+    <h3 class="oc-center">Design Guideline Generator</h3>
+    <div class="oc-center" style="margin-bottom: 56px;">Design by William77. 2024</div>
+  </div>
+  <script>
+
+    // [ Spacing Settings ] ===============================================================
+    const default_spacing = [0, 1, 2, 3, 4, 8, 16, 24, 32, 40, 48, 56, 64, 72, 80, 160]
+
+    // [ Border Settings ] ===============================================================
+    const default_borderWidth = [0, 1, 2, 3, 4]
+
+    // [ Color Settings ] ===============================================================
+    let default_colors = {
+      "primary1": "rgba(222, 49, 99, 1)",
+      "primary2": "rgba(255, 127, 80, 1)",
+      "primary3": "rgba(255, 191, 0, 1)",
+      "secondary1": "rgba(223, 255, 0, 1)",
+      "secondary2": "rgba(159, 226, 191, 1)",
+      "secondary3": "rgba(64, 224, 208, 1)",
+      "other1": "rgba(100, 149, 237, 1)",
+      "other2": "rgba(204, 204, 255, 1)"
+    }
+
+    // [ Font Settings ] ===============================================================
+    const default_fontData = {
+      // h1 ~ h6, the unit size of heading is pixel(px)
+      "heading6Size": [37, 28, 22, 19, 16, 13],
+      // custom size is pixel(px) too
+      "customSize": [18, 16, 14, 12, 11, 10],
+      "fontWeight": [
+        "lighter",
+        "bolder"
+      ],
+      "fontFamilyDefault": "system-ui",
+      // all vscode font families
+      "fontFamily": [
+        "Courier New",
+        "Courier",
+        "monospace",
+        "Franklin Gothic Medium",
+        "Arial Narrow",
+        "Arial",
+        "sans-serif",
+        "Gill Sans",
+        "Gill Sans MT",
+        "Calibri",
+        "Trebuchet MS",
+        "Lucida Sans",
+        "Lucida Sans Regular",
+        "Lucida Grande",
+        "Lucida Sans Unicode",
+        "Geneva",
+        "Verdana",
+        "Segoe UI",
+        "Tahoma",
+        "Times New Roman",
+        "Times",
+        "serif",
+        "Helvetica",
+        "Cambria",
+        "Cochin",
+        "Georgia",
+        "Impact",
+        "Haettenschweiler",
+        "Arial Narrow Bold",
+        "cursive",
+        "fantasy",
+        "system-ui",
+        "-apple-system",
+        "BlinkMacSystemFont",
+        "Roboto",
+        "Oxygen",
+        "Ubuntu",
+        "Cantarell",
+        "Open Sans",
+        "Helvetica Neue"
+      ]
+    }
+
+    function init() {
+
+      document.getElementById('oc-spacing').value = default_spacing.join(', ')
+      document.getElementById('oc-thick').value = default_borderWidth.join(', ')
+
+      const colorContainer = document.getElementById('oc-colors');
+      const colorTemplate = colorContainer.innerHTML;
+      const newColor = document.getElementById('new-color');
+      newColor.onclick = () => { colorReset('add') }
+
+      function colorReset(action) {
+        if (colorContainer.children.length >= 12) { return alert('too many colors') }
+        if (action == 'add') {
+          default_colors = {}
+          const allColor = [...colorContainer.getElementsByClassName('color-palette')];
+          allColor.forEach((color, index) => {
+            default_colors[color.getElementsByClassName('color-name')[0].value] = color.getElementsByClassName('color-val')[0].value
+          })
+          default_colors['color' + (allColor.length + 1)] = 'black';
+        }
+        let colorString = '';
+        const colorKeys = Object.keys(default_colors);
+        colorKeys.forEach(key => colorString += colorTemplate)
+        colorContainer.innerHTML = colorString
+        const allColor = [...colorContainer.getElementsByClassName('color-palette')];
+        allColor.forEach((color, index) => {
+          color.getElementsByClassName('color-display')[0].style.backgroundColor = default_colors[colorKeys[index]]
+          color.getElementsByClassName('color-name')[0].value = colorKeys[index] || 'new color'
+          color.getElementsByClassName('color-val')[0].value = default_colors[colorKeys[index]] || 'black'
+          color.getElementsByClassName('color-val')[0].onkeyup = e => { color.getElementsByClassName('color-display')[0].style.backgroundColor = e.target.value }
+          color.getElementsByClassName('color-x')[0].onclick = e => { e.target.parentElement.remove(); }
+        })
+      }
+      colorReset();
+
+      document.getElementById('oc-heading').value = default_fontData.heading6Size.join(', ')
+      document.getElementById('oc-font-size').value = default_fontData.customSize.join(', ')
+      document.getElementById('oc-font-family').value = default_fontData.fontFamilyDefault
+
+      const allFontFamily = document.getElementById('all-font-family')
+      const allFontFamilyTemplate = allFontFamily.innerHTML
+      let familyString = '';
+      default_fontData.fontFamily.forEach(item => familyString += allFontFamilyTemplate)
+      allFontFamily.innerHTML = familyString
+      const allfont = [...allFontFamily.getElementsByClassName('family')];
+      allfont.forEach((font, index) => {
+        font.style.fontFamily = default_fontData.fontFamily[index];
+        font.innerText = default_fontData.fontFamily[index]
+        font.onclick = e => { document.getElementById('oc-font-family').value = default_fontData.fontFamilyDefault = document.body.style.fontFamily = default_fontData.fontFamily[index] }
+      })
+
+      document.getElementById('generate').onclick = generate
+    }
+    init()
+
+    function downloadCSS() {
+      var filename = 'oc-guideline.css'
+      const link = document.createElement('a');
+      const file = new Blob([generateCSS()], { type: 'text/plain' });
+      link.setAttribute('href', URL.createObjectURL(file));
+      link.setAttribute('download', filename);
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+
+    function generateCSS() {
+      const demoArea = document.getElementById('demo-area')
+      demoArea.innerHTML = ''
+      let cssStr = ''
+      const colorKeys = Object.keys(default_colors);
+
+      // root
+      cssStr += ':root {\r\n'
+      colorKeys.forEach(key => {
+        cssStr += `--oc-color-${key}: ${default_colors[key]};\r\n`
+      })
+      cssStr += '}\r\n'
+
+      // font
+      cssStr += `body {font-family: '${default_fontData.fontFamilyDefault}';}\r\n`
+      // default_fontData.fontFamily list
+      default_fontData.fontFamily.forEach((f, index) => {
+        cssStr += `.oc-ff-${f.toLowerCase().split(' ').join('-')} {font-family: '${f}';}\r\n`
+      })
+      // default_fontData.heading6Size : title size of text - h1 ~ h6
+      default_fontData.heading6Size.forEach((size, index) => {
+        cssStr += `h${index + 1} {font-size: ${size}px;}\r\n`
+      })
+      // default_fontData.customSize : custom size define
+      default_fontData.customSize.forEach(size => {
+        cssStr += `.oc-fs-${size} {font-size: ${size}px;}\r\n`
+      })
+      // default_fontData.fontWeight : custom font weight
+      default_fontData.fontWeight.forEach(w => {
+        cssStr += `.oc-fw-${w} {font-weight: ${w};}\r\n`
+      })
+
+      // border
+      default_borderWidth.forEach(width => {
+        cssStr += `.oc-bd-${width} {border: ${width}px solid black;}\r\n`
+      })
+
+      default_borderWidth.forEach(width => {
+        cssStr += `.oc-bdl-${width} {border-left: ${width}px solid black;}\r\n`
+      })
+
+      default_borderWidth.forEach(width => {
+        cssStr += `.oc-bdt-${width} {border-top: ${width}px solid black;}\r\n`
+      })
+
+      default_borderWidth.forEach(width => {
+        cssStr += `.oc-bdr-${width} {border-right: ${width}px solid black;}\r\n`
+      })
+
+      default_borderWidth.forEach(width => {
+        cssStr += `.oc-bdb-${width} {border-bottom: ${width}px solid black;}\r\n`
+      })
+
+      default_borderWidth.forEach(width => {
+        cssStr += `.oc-bdx-${width} {border-left: ${width}px solid black;border-right: ${width}px solid black;}\r\n`
+      })
+
+      default_borderWidth.forEach(width => {
+        cssStr += `.oc-bdy-${width} {border-top: ${width}px solid black;border-bottom: ${width}px solid black;}\r\n`
+      })
+
+      Array(5).fill(0).forEach((_, index) => {
+        cssStr += `.oc-bd-radius-${(index + 1) * 2} {border-radius: ${(index + 1) * 2}px;}\r\n`
+      })
+
+      // outline
+      default_borderWidth.forEach(width => {
+        cssStr += `.oc-ol-${width} {outline: ${width}px solid black;}\r\n`
+      })
+
+      // .oc-text-shadow-[color name]
+      colorKeys.forEach(key => {
+        cssStr += `.oc-text-shadow-${key} {text-shadow:0px 0px 1px var(--oc-color-${key});}\r\n`
+      })
+
+      // text-shadow
+      Array(11).fill(0).forEach((_, index, arr) => {
+        let cv = 20 * index / (arr.length - 1)
+        cssStr += `.oc-text-shadow-${index * 10} {text-shadow:0px 0px ${cv}px black;}\r\n`
+      })
+
+      // .oc-box-shadow-[color name]
+      colorKeys.forEach(key => {
+        cssStr += `.oc-box-shadow-${key} {box-shadow:0px 0px 10px var(--oc-color-${key});}\r\n`
+      })
+
+      // box-shadow
+      Array(11).fill(0).forEach((_, index, arr) => {
+        let cv = 20 * index / (arr.length - 1)
+        cssStr += `.oc-box-shadow-${index * 10} {box-shadow:0px 0px ${cv}px black;}\r\n`
+      })
+
+      // .oc-box-shadow-[color name]
+      colorKeys.forEach(key => {
+        cssStr += `.oc-box-shadow-inset-${key} {box-shadow:inset 0px 0px 10px var(--oc-color-${key});}\r\n`
+      })
+
+      // box-shadow-inset
+      Array(11).fill(0).forEach((_, index, arr) => {
+        let cv = 20 * index / (arr.length - 1)
+        cssStr += `.oc-box-shadow-inset-${index * 10} {box-shadow:inset 0px 0px ${cv}px black;}\r\n`
+      })
+
+
+      // .oc-text-[color name]
+      colorKeys.forEach(key => {
+        cssStr += `.oc-text-${key} {color:var(--oc-color-${key});}\r\n`
+      })
+
+      // .oc-text-0, .oc-text-10, .oc-text-20 ~ .oc-text-100
+      Array(11).fill(0).forEach((_, index, arr) => {
+        let cv = 255 * index / (arr.length - 1)
+        cssStr += `.oc-text-${index * 10} {color:rgba(${cv},${cv},${cv},1);}\r\n`
+      })
+
+      // .oc-bg-[color name]
+      colorKeys.forEach(key => {
+        cssStr += `.oc-bg-${key} {background-color:var(--oc-color-${key});}\r\n`
+      })
+
+      // .oc-bg-0, .oc-bg-10, .oc-bg-20 ~ .oc-bg-100
+      Array(11).fill(0).forEach((_, index, arr) => {
+        let cv = 255 * index / (arr.length - 1)
+        cssStr += `.oc-bg-${index * 10} {background-color:rgba(${cv},${cv},${cv},1);}\r\n`
+      })
+
+      // border - .oc-bd-[color name]
+      colorKeys.forEach(key => {
+        cssStr += `.oc-bd-${key} {border-color:var(--oc-color-${key});}\r\n`
+      })
+
+      Array(11).fill(0).forEach((_, index, arr) => {
+        let cv = 255 * index / (arr.length - 1)
+        cssStr += `.oc-bd-c${index * 10} {border-color:rgba(${cv},${cv},${cv},1);}\r\n`
+      })
+
+      // outline - .oc-ol-[color name]
+      colorKeys.forEach(key => {
+        cssStr += `.oc-ol-${key} {outline-color:var(--oc-color-${key});}\r\n`
+      })
+
+      Array(11).fill(0).forEach((_, index, arr) => {
+        let cv = 255 * index / (arr.length - 1)
+        cssStr += `.oc-ol-c${index * 10} {outline-color:rgba(${cv},${cv},${cv},1);}\r\n`
+      })
+
+      // padding
+      default_spacing.forEach(item => {
+        cssStr += `.oc-p-${item}{padding:${item}px;}\r\n`;
+      })
+      default_spacing.forEach(item => {
+        cssStr += `.oc-pl-${item}{padding-left:${item}px;}\r\n`;
+      })
+      default_spacing.forEach(item => {
+        cssStr += `.oc-pt-${item}{padding-top:${item}px;}\r\n`;
+      })
+      default_spacing.forEach(item => {
+        cssStr += `.oc-pr-${item}{padding-right:${item}px;}\r\n`;
+      })
+      default_spacing.forEach(item => {
+        cssStr += `.oc-pb-${item}{padding-bottom:${item}px;}\r\n`;
+      })
+      default_spacing.forEach(item => {
+        cssStr += `.oc-px-${item}{padding-left:${item}px;padding-right:${item}px;}\r\n`;
+      })
+      default_spacing.forEach(item => {
+        cssStr += `.oc-py-${item}{padding-top:${item}px;padding-bottom:${item}px;}\r\n`;
+      })
+
+      // margin
+      default_spacing.forEach(item => {
+        cssStr += `.oc-m-${item}{margin:${item}px;}\r\n`;
+      })
+      default_spacing.forEach(item => {
+        cssStr += `.oc-ml-${item}{margin-left:${item}px;}\r\n`;
+      })
+      default_spacing.forEach(item => {
+        cssStr += `.oc-mt-${item}{margin-top:${item}px;}\r\n`;
+      })
+      default_spacing.forEach(item => {
+        cssStr += `.oc-mr-${item}{margin-right:${item}px;}\r\n`;
+      })
+      default_spacing.forEach(item => {
+        cssStr += `.oc-mb-${item}{margin-bottom:${item}px;}\r\n`;
+      })
+      default_spacing.forEach(item => {
+        cssStr += `.oc-mx-${item}{margin-left:${item}px;margin-right:${item}px;}\r\n`;
+      })
+      default_spacing.forEach(item => {
+        cssStr += `.oc-my-${item}{margin-top:${item}px;margin-bottom:${item}px;}\r\n`;
+      })
+
+      // opacity
+      Array(11).fill(0).forEach((_, index, arr) => {
+        let cv = 100 * index / (arr.length - 1)
+        cssStr += `.oc-opacity-${index * 10} {opacity:${cv}%;}\r\n`
+      })
+
+      return cssStr
+    }
+
+    function generate() {
+      const demoArea = document.getElementById('demo-area')
+      demoArea.innerHTML = ''
+      let commonStyle = 'margin:16px 0; border-bottom: .1px solid #979179;'
+      let demoStr = ''
+
+      // font
+      demoStr += `<h2 style="margin-top:120px">Font Definition - Family & Size & Weight</h2>`
+      demoStr += `<div style="${commonStyle}">your default font-family on body tag is "${default_fontData.fontFamilyDefault}"</div>`
+      default_fontData.fontFamily.forEach((f, index) => {
+        demoStr += `<div style="${commonStyle}">${index + 1} : <span style="font-family:'${f}';">${f} (.oc-ff-${f.toLowerCase().split(' ').join('-')})</span></div>`
+      })
+      default_fontData.heading6Size.forEach((size, index) => {
+        demoStr += `<h${index + 1} style="${commonStyle}">H${index + 1} - ${size}px</h${index + 1}>`
+      })
+      default_fontData.customSize.forEach(size => {
+        demoStr += `<div style="${commonStyle}; font-size:${size}px;" class="oc-fs-${size}">.oc-fs-${size}</div>`
+      })
+      default_fontData.fontWeight.forEach(w => {
+        demoStr += `<div style="${commonStyle}; font-weight:${w};">.oc-fw-${w}</div>`
+      })
+
+      // border
+      demoStr += `<h2 style="margin-top:80px">Border Definition - Border & Outline</h2>`
+      default_borderWidth.forEach(width => {
+        demoStr += `<div style="${commonStyle}; border:${width}px solid #979179;">.oc-bd-${width}  (bd = bd | bdl | bdt | bdr | bdb | bdx | bdy)</div>`
+      })
+      default_borderWidth.forEach(width => {
+        demoStr += `<div style="${commonStyle}; outline:${width}px solid #979179;">.oc-ol-${width}</div>`
+      })
+      Array(5).fill(0).forEach((_, index) => {
+        demoStr += `<div style="${commonStyle}; border:1px solid #979179; border-radius:${(index + 1) * 2}px">.oc-bd-radius-${(index + 1) * 2}</div>`
+      })
+
+      // color
+      demoStr += `<h2 style="margin-top:80px">Colors Definition - Text & Background Colors</h2>`
+      const colorKeys = Object.keys(default_colors);
+
+      // text-shadow
+      colorKeys.forEach((key, index) => {
+        demoStr += `<div style='${commonStyle};text-shadow:0px 0px 1px ${default_colors[key]}'>.oc-ts-${key}</div>`
+      })
+      Array(11).fill(0).forEach((_, index, arr) => {
+        demoStr += `<div style='${commonStyle};text-shadow:0px 0px ${index * .5}px black'>.oc-ts-c${index * 10}</div>`
+      })
+
+      // box-shadow
+      colorKeys.forEach((key, index) => {
+        demoStr += `<div style='${commonStyle};box-shadow:0px 0px 7px ${default_colors[key]}'>.oc-bs-${key}</div>`
+      })
+      Array(11).fill(0).forEach((_, index, arr) => {
+        demoStr += `<div style='${commonStyle};box-shadow:0px 0px ${index * .5}px black'>.oc-bs-c${index * 10}</div>`
+      })
+
+      // inset
+      colorKeys.forEach(key => {
+        demoStr += `<div style='${commonStyle};box-shadow:inset 0px 0px 7px ${default_colors[key]}'>.oc-bs-inset-${key}</div>`
+      })
+      Array(11).fill(0).forEach((_, index, arr) => {
+        demoStr += `<div style='${commonStyle};box-shadow:inset 0px 0px ${index * .5}px black'>.oc-bs-inset-c${index * 10}</div>`
+      })
+
+      // text
+      colorKeys.forEach(key => {
+        demoStr += `<div style='${commonStyle};color:${default_colors[key]}'>.oc-text-${key}</div>`
+      })
+      Array(11).fill(0).forEach((_, index, arr) => {
+        const c = Math.round(255 / 10 * index)
+        demoStr += `<div style='${commonStyle}; color:rgb(${c},${c},${c}); text-shadow:black .1px 0 1px;'>.oc-text-c${index * 10}</div>`
+      })
+
+      // bg
+      colorKeys.forEach(key => {
+        demoStr += `<div style='${commonStyle}; background-color:${default_colors[key]}; color:black'>.oc-bg-${key}</div>`
+      })
+      Array(11).fill(0).forEach((_, index, arr) => {
+        const c = Math.round(255 / 10 * index)
+        demoStr += `<div style='${commonStyle}; background-color:rgb(${c},${c},${c}); text-shadow:white 1px 0 1px;'>.oc-bg-c${index * 10}</div>`
+      })
+
+      // border
+      colorKeys.forEach(key => {
+        demoStr += `<div style="margin:8px 0;border:${default_borderWidth[default_borderWidth.length - 1]}px solid ${default_colors[key]}">.oc-bd-${default_borderWidth[default_borderWidth.length - 1]} .oc-bd-${key}</div>`
+      })
+      Array(11).fill(0).forEach((_, index, arr) => {
+        const c = Math.round(255 / 10 * index)
+        demoStr += `<div style='margin:8px 0;border:${default_borderWidth[default_borderWidth.length - 1]}px solid rgb(${c},${c},${c});text-shadow:white 1px 0 1px;'>.oc-bd-${default_borderWidth[default_borderWidth.length - 1]} .oc-bd-c${index * 10}</div>`
+      })
+
+      // outline
+      colorKeys.forEach(key => {
+        demoStr += `<div style="margin:8px 0;outline:${default_borderWidth[default_borderWidth.length - 1]}px solid ${default_colors[key]}">.oc-ol-${default_borderWidth[default_borderWidth.length - 1]} .oc-ol-${key}</div>`
+      })
+      Array(11).fill(0).forEach((_, index, arr) => {
+        const c = Math.round(255 / 10 * index)
+        demoStr += `<div style='margin:8px 0;outline:${default_borderWidth[default_borderWidth.length - 1]}px solid rgb(${c},${c},${c});text-shadow:white 1px 0 1px;'>.oc-ol-${default_borderWidth[default_borderWidth.length - 1]} .oc-ol-c${index * 10}</div>`
+      })
+
+      // spacing
+      demoStr += `<h2 style="margin-top:80px">Spacing Definition - Margin & Padding</h2>`
+      default_spacing.forEach(item => {
+        demoStr += `<div style="${commonStyle}; margin:${item}px; background-color:#979179; color:white;"><div>.oc-m-${item} (m = m | ml | mt | mr | mb | mx | my)</div></div>`
+      })
+
+      default_spacing.forEach(item => {
+        demoStr += `<div style="${commonStyle}; padding:${item}px; background-color:#979179; color:white;"><div>.oc-p-${item} (p = p | pl | pt | pr | pb | px | py)</div></div>`
+      })
+
+      // Opacity
+      demoStr += `<h2 style="margin-top:80px">Opacity Definition</h2>`
+
+      Array(11).fill(0).forEach((_, index, arr) => {
+        demoStr += `<div style="${commonStyle}; opacity:${(index + 1) / 11}">.oc-opacity-${index * 10}</div>`
+      })
+
+      demoArea.innerHTML = demoStr
+    }
+
   </script>
 </body>
 
