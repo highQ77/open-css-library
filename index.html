@@ -449,7 +449,6 @@
         default_colors[color.getElementsByClassName('color-name')[0].value] = color.getElementsByClassName('color-val')[0].value
       })
     }
-
     function init() {
 
       document.getElementById('oc-spacing').value = default_spacing.join(', ')
@@ -881,7 +880,7 @@
 
     <div style="background-color: #979179;height: 4px;margin-bottom: 32px;"></div>
     <div class="oc-area-limit">
-      <h1>Components</h1>
+      <h1>UI Component Samples</h1>
       <h4>Open CSS Library by William77</h4>
     </div>
 
@@ -901,9 +900,9 @@
     <div class="oc-area-limit">
       <div class="oc-fs-14 oc-my-40">★ dark button</div>
       <button
-        class="oc-text-100 oc-bg-other3 oc-bd-1 oc-bdb-3 oc-bd-c10 oc-px-32 oc-py-4 oc-bd-radius-8">button</button>
+        class="oc-text-c100 oc-bg-other3 oc-bd-1 oc-bdb-3 oc-bd-c10 oc-px-32 oc-py-4 oc-bd-radius-8">button</button>
       <textarea>
-        <button class="oc-text-100 oc-bg-other3 oc-bd-1 oc-bdb-3 oc-bd-c10 oc-px-32 oc-py-4 oc-bd-radius-8">button</button>
+        <button class="oc-text-c100 oc-bg-other3 oc-bd-1 oc-bdb-3 oc-bd-c10 oc-px-32 oc-py-4 oc-bd-radius-8">button</button>
       </textarea>
     </div>
 
@@ -912,13 +911,13 @@
     <div class="oc-area-limit">
       <div class="oc-fs-14 oc-my-40">★ selection</div>
       <select
-        class="oc-text-100 oc-bg-other3 oc-bd-1 oc-bdb-3 oc-bd-c10 oc-px-64 oc-py-4 oc-bd-radius-8 oc-ol-0 oc-fs-12">
+        class="oc-text-c100 oc-bg-other3 oc-bd-1 oc-bdb-3 oc-bd-c10 oc-px-64 oc-py-4 oc-bd-radius-8 oc-ol-0 oc-fs-12">
         <option>option 1</option>
         <option>option 2</option>
         <option>option 3</option>
       </select>
       <textarea>
-        <select class="oc-text-100 oc-bg-other3 oc-bd-1 oc-bdb-3 oc-bd-c10 oc-px-64 oc-py-4 oc-bd-radius-8 oc-ol-0 oc-fs-12">
+        <select class="oc-text-c100 oc-bg-other3 oc-bd-1 oc-bdb-3 oc-bd-c10 oc-px-64 oc-py-4 oc-bd-radius-8 oc-ol-0 oc-fs-12">
           <option>option 1</option>
           <option>option 2</option>
           <option>option 3</option>
@@ -969,10 +968,70 @@
       </textarea>
     </div>
 
+    <hr style="margin: 28px 0;">
+
+    <div class="oc-area-limit">
+      <div class="oc-fs-14 oc-my-40">★ dummy image</div>
+      <img class="oc-cross" style="width: 250px; height: 250px;">
+      <textarea>
+        <img class="oc-cross" style="width: 250px; height: 250px;">
+      </textarea>
+    </div>
+
+    <hr style="margin: 28px 0;">
+
+    <div class="oc-area-limit">
+      <div class="oc-fs-14 oc-my-40">★ dialog</div>
+      <div class="oc-bd-1 oc-bdb-3 oc-bd-other3 oc-bd-radius-6 oc-bg-c100" style="width: 500px;">
+        <div class="oc-bg-other3 oc-text-c100 oc-py-4 oc-center">Dialog Title</div>
+        <div class="oc-text-other3 oc-p-16 oc-bd-radius-6">
+          <div>
+            <img class="oc-cross oc-float-left oc-mr-8">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+            has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of
+            type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the
+            leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with
+            the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
+            software like Aldus PageMaker including versions of Lorem Ipsum.
+          </div>
+          <hr class="oc-my-16">
+          <div class="oc-mt-8 oc-right">
+            <button
+              class="oc-text-c100 oc-bg-other3 oc-bd-1 oc-bdb-3 oc-bd-c10 oc-px-32 oc-py-4 oc-bd-radius-8 oc-mr-4">OK</button>
+            <button
+              class="oc-text-c100 oc-bg-other3 oc-bd-1 oc-bdb-3 oc-bd-c10 oc-px-32 oc-py-4 oc-bd-radius-8">Cancel</button>
+          </div>
+        </div>
+      </div>
+      <textarea>
+        <div class="oc-bd-1 oc-bdb-3 oc-bd-other3 oc-bd-radius-6 oc-bg-c100" style="width: 500px;">
+          <div class="oc-bg-other3 oc-text-c100 oc-py-4 oc-center">Dialog Title</div>
+          <div class="oc-text-other3 oc-p-16 oc-bd-radius-6">
+            <div>
+              <img class="oc-cross oc-float-left oc-mr-8">
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+              has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of
+              type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the
+              leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with
+              the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
+              software like Aldus PageMaker including versions of Lorem Ipsum.
+            </div>
+            <hr class="oc-my-16">
+            <div class="oc-mt-8 oc-right">
+              <button
+                class="oc-text-c100 oc-bg-other3 oc-bd-1 oc-bdb-3 oc-bd-c10 oc-px-32 oc-py-4 oc-bd-radius-8 oc-mr-4">OK</button>
+              <button
+                class="oc-text-c100 oc-bg-other3 oc-bd-1 oc-bdb-3 oc-bd-c10 oc-px-32 oc-py-4 oc-bd-radius-8">Cancel</button>
+            </div>
+          </div>
+        </div>
+      </textarea>
+    </div>
+
     <hr style="margin: 56px 0;">
 
 
-    <h3 class="oc-center">Components</h3>
+    <h3 class="oc-center">UI Component Samples</h3>
     <div class="oc-center" style="margin-bottom: 56px;">Design by William77. 2024</div>
 
 
