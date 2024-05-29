@@ -130,9 +130,9 @@
       <div class="oc-mb-16">
         <a href="#part-icons">5. Bootstrap Icons / 可依需求引入 Bootstrap 圖示</a>
       </div>
-      <div class="oc-mb-16">
+      <!-- <div class="oc-mb-16">
         <a href="javascript:void(0);" onclick="openPage('blog')">6. Sample - Blog Layout / 部落格切版樣品</a>
-      </div>
+      </div> -->
       <i class="oc-text-c100  oc-opacity-60 bi bi-arrow-down-circle-fill" style="font-size: 40px;"></i>
       <h6 class="oc-text-c100 oc-opacity-30">scroll down</h6>
     </div>
@@ -140,7 +140,6 @@
   <script>
     async function openPage(pageName) {
       let pageContent = await (await fetch('./layout/' + pageName + '.html')).text()
-      console.log(pageContent)
       let win = window.open('', '_blank')
       win.document.write(pageContent)
     } 
