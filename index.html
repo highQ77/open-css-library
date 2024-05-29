@@ -8,11 +8,27 @@
   <title>Open Guideline Generator</title>
   <link rel="stylesheet" href="./oc-layout.css">
   <style>
+    @import url(./oc-layout.css);
+    @import url(./oc-guideline.css);
+    @import url(./oc-misc.css);
+
     body {
       font-family: system-ui;
       font-size: 12px;
       color: #979179;
       background: #EFEFEF;
+    }
+
+    h1 {
+      font-size: 28px;
+    }
+
+    h3 {
+      font-size: 16.5px;
+    }
+
+    h4 {
+      font-size: 14px;
     }
 
     h1,
@@ -27,8 +43,8 @@
     button {
       color: #979179;
       border-radius: 2px;
-      border: .5px solid #979179 !important;
-      border-bottom: 2px solid #979179 !important;
+      border: .5px solid #979179;
+      border-bottom: 2px solid #979179;
       font-size: 12px;
       cursor: pointer;
     }
@@ -40,11 +56,11 @@
     }
 
     textarea,
-    input {
+    input[type=text] {
       font-size: 12px;
       opacity: .6;
       background-color: white;
-      border: 1px solid #979179;
+      border: .1px solid #979179;
       outline: none;
       padding: 10px;
       margin: 8px 0px;
@@ -61,6 +77,10 @@
       height: 120px;
       box-shadow: inset 0 0 10px black;
     }
+
+    input {
+      accent-color: #979179;
+    }
   </style>
 </head>
 
@@ -71,7 +91,7 @@
     <div style="background-color: #979179;height: 4px;margin-bottom: 32px;"></div>
     <div class="oc-area-limit">
       <h1>Minimal Flex-Based Responsive CSS Layout System</h1>
-      <h4>Open CSS Library by William77</h4>
+      <h4>oc-layout.css - Open CSS Library by William77</h4>
     </div>
 
     <hr>
@@ -258,15 +278,6 @@
 
 
   </div>
-  <script>
-    // [ Format Textarea ] ===============================================================
-    [...document.getElementsByTagName('textarea')].forEach(tt => {
-      let s = tt.value.indexOf('<')
-      let t = tt.value.split('\n').map(item => item.slice(s)).filter(item => item != '')
-      tt.rows = t.length
-      tt.value = t.join('\n')
-    })
-  </script>
 
   <div class="river"></div>
 
@@ -275,7 +286,7 @@
     <div style="background-color: #979179;height: 4px;margin-bottom: 32px;"></div>
     <div class="oc-area-limit">
       <h1>Design Guideline Generator</h1>
-      <h4>Open CSS Library by William77</h4>
+      <h4>oc-guideline.css - Open CSS Library by William77</h4>
     </div>
 
     <hr>
@@ -370,7 +381,8 @@
       "secondary2": "rgba(159, 226, 191, 1)",
       "secondary3": "rgba(64, 224, 208, 1)",
       "other1": "rgba(100, 149, 237, 1)",
-      "other2": "rgba(204, 204, 255, 1)"
+      "other2": "rgba(204, 204, 255, 1)",
+      "other3": "#979179",
     }
 
     // [ Font Settings ] ===============================================================
@@ -832,7 +844,7 @@
     <div style="background-color: #979179;height: 4px;margin-bottom: 32px;"></div>
     <div class="oc-area-limit">
       <h1>Miscellaneous</h1>
-      <h4>Open CSS Library by William77</h4>
+      <h4>oc-misc.css - Open CSS Library by William77</h4>
     </div>
 
     <hr>
@@ -842,69 +854,14 @@
       ★ css addons / 各種 css 補強設定
     </div>
     <div class="oc-area oc-area-limit">
-      <pre id="misc-css" style="padding: 16px;">
-button {
-  cursor: pointer;
-}
-
-button:hover {
-    opacity: .8;
-}
-
-img {
-    vertical-align: middle;
-}
-
-.oc-float-left {
-    float: left;
-}
-
-.oc-float-right {
-    float: right;
-}
-
-.oc-w-100 {
-    width: 100%;
-}
-
-.oc-inline-block {
-    display: inline-block;
-}
-
-.oc-block {
-    display: block;
-}
-
-.oc-inline {
-    display: inline;
-}
-
-.oc-none {
-    display: none;
-}
-
-.oc-pos-relative {
-    position: relative;
-}
-
-.oc-pos-absolute {
-    position: absolute;
-}
-
-.oc-pos-fixed {
-    position: fixed;
-}
-
-.oc-cursor {
-    cursor: pointer;
-}
-
-hr {
-    border: none;
-    border-top: .1px solid #666;
-}
-      </pre>
+      <pre id="misc-css" style="padding: 16px;"></pre>
     </div>
+    <script>
+      let misc = document.getElementById('misc-css')
+      fetch('./oc-misc.css').then(r => r.text()).then(r => {
+        misc.innerHTML = r
+      })
+    </script>
 
     <hr style="margin: 56px 0;">
 
@@ -914,6 +871,105 @@ hr {
 
 
   </div>
+
+  <div class="river"></div>
+
+  <div id="oc-component">
+
+    <div style="background-color: #979179;height: 4px;margin-bottom: 32px;"></div>
+    <div class="oc-area-limit">
+      <h1>Components</h1>
+      <h4>Open CSS Library by William77</h4>
+    </div>
+
+    <hr>
+
+    <div class="oc-area-limit">
+      <div class="oc-fs-14 oc-my-40">★ light button</div>
+      <button
+        class="oc-text-other3 oc-bg-100 oc-bd-1 oc-bdb-3 oc-bd-other3 oc-px-32 oc-py-4 oc-bd-radius-8">button</button>
+      <textarea>
+        <button class="oc-text-other3 oc-bg-100 oc-bd-1 oc-bdb-3 oc-bd-other3 oc-px-32 oc-py-4 oc-bd-radius-8">button</button>
+      </textarea>
+    </div>
+
+    <hr style="margin: 28px 0;">
+
+    <div class="oc-area-limit">
+      <div class="oc-fs-14 oc-my-40">★ dark button</div>
+      <button
+        class="oc-text-100 oc-bg-other3 oc-bd-1 oc-bdb-3 oc-bd-c10 oc-px-32 oc-py-4 oc-bd-radius-8">button</button>
+      <textarea>
+        <button class="oc-text-100 oc-bg-other3 oc-bd-1 oc-bdb-3 oc-bd-c10 oc-px-32 oc-py-4 oc-bd-radius-8">button</button>
+      </textarea>
+    </div>
+
+    <hr style="margin: 28px 0;">
+
+    <div class="oc-area-limit">
+      <div class="oc-fs-14 oc-my-40">★ selection</div>
+      <select
+        class="oc-text-100 oc-bg-other3 oc-bd-1 oc-bdb-3 oc-bd-c10 oc-px-64 oc-py-4 oc-bd-radius-8 oc-ol-0 oc-fs-12">
+        <option>option 1</option>
+        <option>option 2</option>
+        <option>option 3</option>
+      </select>
+      <textarea>
+        <select class="oc-text-100 oc-bg-other3 oc-bd-1 oc-bdb-3 oc-bd-c10 oc-px-64 oc-py-4 oc-bd-radius-8 oc-ol-0 oc-fs-12">
+          <option>option 1</option>
+          <option>option 2</option>
+          <option>option 3</option>
+        </select>
+      </textarea>
+    </div>
+
+    <hr style="margin: 28px 0;">
+
+    <div class="oc-area-limit">
+      <div class="oc-fs-14 oc-my-40">★ input radio</div>
+      <div class="oc-middle"><input type="radio" name="my-radio" class="oc-m-8 oc-ml-0" checked /> radio</div>
+      <div class="oc-middle"><input type="radio" name="my-radio" class="oc-m-8 oc-ml-0" /> radio</div>
+      <div class="oc-middle"><input type="radio" name="my-radio" class="oc-m-8 oc-ml-0" /> radio</div>
+      <textarea>
+        <div class="oc-middle"><input type="radio" name="my-radio" class="oc-m-8 oc-ml-0" checked /> radio</div>
+        <div class="oc-middle"><input type="radio" name="my-radio" class="oc-m-8 oc-ml-0" /> radio</div>
+        <div class="oc-middle"><input type="radio" name="my-radio" class="oc-m-8 oc-ml-0" /> radio</div>
+      </textarea>
+    </div>
+
+    <hr style="margin: 28px 0;">
+
+    <div class="oc-area-limit">
+      <div class="oc-fs-14 oc-my-40">★ input checkbox</div>
+      <div class="oc-middle"><input type="checkbox" name="my-checkbox" class="oc-m-8 oc-ml-0" checked /> checkbox</div>
+      <div class="oc-middle"><input type="checkbox" name="my-checkbox" class="oc-m-8 oc-ml-0" /> checkbox</div>
+      <div class="oc-middle"><input type="checkbox" name="my-checkbox" class="oc-m-8 oc-ml-0" /> checkbox</div>
+      <textarea>
+        <div class="oc-middle"><input type="checkbox" name="my-checkbox" class="oc-m-8 oc-ml-0" checked/> checkbox</div>
+        <div class="oc-middle"><input type="checkbox" name="my-checkbox" class="oc-m-8 oc-ml-0" /> checkbox</div>
+        <div class="oc-middle"><input type="checkbox" name="my-checkbox" class="oc-m-8 oc-ml-0" /> checkbox</div>
+      </textarea>
+    </div>
+
+    <hr style="margin: 56px 0;">
+
+
+    <h3 class="oc-center">Components</h3>
+    <div class="oc-center" style="margin-bottom: 56px;">Design by William77. 2024</div>
+
+
+  </div>
+  <div class="river"></div>
+
+  <script>
+      // [ Format Textarea ] ===============================================================
+      ;[...document.getElementsByTagName('textarea')].forEach(tt => {
+        let s = tt.value.indexOf('<')
+        let t = tt.value.split('\n').map(item => item.slice(s)).filter(item => item != '')
+        tt.rows = t.length
+        tt.value = t.join('\n')
+      })
+  </script>
 </body>
 
 </html>
