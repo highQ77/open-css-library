@@ -1,3 +1,7 @@
+* {
+    line-height: 1.5em;
+}
+
 button {
     cursor: pointer;
 }
@@ -8,6 +12,15 @@ button:hover {
 
 img {
     vertical-align: middle;
+}
+
+hr {
+    border: none;
+    border-top: .1px solid #666;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 .oc-float-left {
@@ -50,17 +63,16 @@ img {
     position: fixed;
 }
 
+.oc-deco-underline {
+    text-decoration: underline;
+}
+
+.oc-deco-none {
+    text-decoration: none;
+}
+
 .oc-cursor {
     cursor: pointer;
-}
-
-hr {
-    border: none;
-    border-top: .1px solid #666;
-}
-
-html {
-    scroll-behavior: smooth;
 }
 
 .oc-cross {
