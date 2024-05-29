@@ -111,12 +111,12 @@
 
 <body>
 
-  <div class="river oc-middle oc-pl-40 gradient-background" style="height: 100vh;">
+  <div class="river oc-middle oc-pl-16 gradient-background" style="height: 100vh;">
     <div>
       <h1 class="oc-text-c100 oc-opacity-80" style="font-size: 40px;">Open CSS Library</h1>
       <h5 class="oc-text-c100 oc-opacity-30">Design by William77. 2024</h5>
       <div class="oc-mb-16">
-        <a href="#part-responsive">1. Minimal Flex-Based Responsive CSS Layout System / 響應式系統設計</a>
+        <a href="#part-responsive">1. Minimal Flex-Based Responsive CSS Layout System / 響應式設計</a>
       </div>
       <div class="oc-mb-16">
         <a href="#part-guideline">2. Design Guideline Generator / 程式化設計準則</a>
@@ -906,7 +906,7 @@
       ★ css addons / 各種 css 補強設定
     </div>
     <div class="oc-area oc-area-limit">
-      <pre id="misc-css" style="padding: 16px;"></pre>
+      <pre id="misc-css" style="padding: 16px; overflow: scroll;"></pre>
     </div>
     <script>
       let misc = document.getElementById('misc-css')
@@ -1105,7 +1105,7 @@
       <input type="text" placeholder="search icon-name"
         onkeyup="setIcons(iconsResult.filter(i=>i.indexOf(this.value)>-1))" />
     </div>
-    <div id="icons-container" class="oc-area-limit">
+    <div id="icons-container" class="oc-area-limit oc-overflow-hidden">
     </div>
 
     <script>
@@ -1141,10 +1141,11 @@
       let t = tt.value.split('\n').map(item => item.slice(s)).filter(item => item != '')
       tt.rows = t.length
       tt.value = t.join('\n')
+      tt.style.overflow = 'scroll'
     })
   </script>
 
-  <div class="oc-pos-fixed oc-right oc-p-8 oc-pr-0" style="right:0px; top:0px; width: 100vw;">
+  <div class="oc-pos-fixed oc-p-8" style="right:0px; top:0px;">
     <button style="padding: 4px 16px;" onclick="downloadOpenCssLibrary()">download
       all-in-one.css</button>
   </div>

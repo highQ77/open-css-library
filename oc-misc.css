@@ -71,6 +71,14 @@ html {
     text-decoration: none;
 }
 
+.oc-overflow-hidden {
+    overflow: hidden;
+}
+
+.oc-overflow-scroll {
+    overflow: scroll;
+}
+
 .oc-cursor {
     cursor: pointer;
 }
