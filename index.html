@@ -20,6 +20,11 @@
       background: #EFEFEF;
     }
 
+    a {
+      color: white;
+      opacity: 50%;
+    }
+
     h1 {
       font-size: 28px;
     }
@@ -82,13 +87,56 @@
     input {
       accent-color: #979179;
     }
+
+    .gradient-background {
+      background: linear-gradient(90deg, #979179, #3d3b34, #3d3b34);
+      background-size: 180% 180%;
+      animation: gradient-animation 10s ease infinite;
+    }
+
+    @keyframes gradient-animation {
+      0% {
+        background-position: 0% 50%;
+      }
+
+      50% {
+        background-position: 100% 50%;
+      }
+
+      100% {
+        background-position: 0% 50%;
+      }
+    }
   </style>
 </head>
 
 <body>
 
-  <div id="oc-layout">
+  <div class="river oc-middle oc-pl-40 gradient-background" style="height: 100vh;">
+    <div>
+      <h1 class="oc-text-c100 oc-opacity-80" style="font-size: 40px;">Open CSS Library</h1>
+      <h5 class="oc-text-c100 oc-opacity-30">Design by William77. 2024</h5>
+      <div class="oc-mb-16">
+        <a href="#part-responsive">1. Minimal Flex-Based Responsive CSS Layout System / 響應式系統設計</a>
+      </div>
+      <div class="oc-mb-16">
+        <a href="#part-guideline">2. Design Guideline Generator / 程式化設計準則</a>
+      </div>
+      <div class="oc-mb-16">
+        <a href="#part-misc">3. Miscellaneous / 額外補強的常用樣式</a>
+      </div>
+      <div class="oc-mb-16">
+        <a href="#part-component">4. UI Component Samples / UI元件設計參考</a>
+      </div>
+      <div class="oc-mb-16">
+        <a href="#part-icons">5. Bootstrap Icons / 可依需求引入 Bootstrap 圖示</a>
+      </div>
+      <i class="oc-text-c100  oc-opacity-60 bi bi-arrow-down-circle-fill" style="font-size: 40px;"></i>
+      <h6 class="oc-text-c100 oc-opacity-30">scroll down</h6>
+    </div>
+  </div>
 
+  <div id="part-responsive">
     <div style="background-color: #979179;height: 4px;margin-bottom: 32px;"></div>
     <div class="oc-area-limit">
       <h1>Minimal Flex-Based Responsive CSS Layout System</h1>
@@ -281,8 +329,7 @@
   </div>
 
   <div class="river"></div>
-
-  <div id="oc-guideline">
+  <div id="part-guideline">
 
     <div style="background-color: #979179;height: 4px;margin-bottom: 32px;"></div>
     <div class="oc-area-limit">
@@ -842,7 +889,7 @@
   </script>
 
   <div class="river"></div>
-  <div id="oc-misc">
+  <div id="part-misc">
 
     <div style="background-color: #979179;height: 4px;margin-bottom: 32px;"></div>
     <div class="oc-area-limit">
@@ -876,8 +923,7 @@
   </div>
 
   <div class="river"></div>
-
-  <div id="oc-component">
+  <div id="part-component">
 
     <div style="background-color: #979179;height: 4px;margin-bottom: 32px;"></div>
     <div class="oc-area-limit">
@@ -1037,8 +1083,10 @@
 
 
   </div>
+
   <div class="river"></div>
-  <div id="oc-icons">
+
+  <div id="part-icons">
 
     <div style="background-color: #979179;height: 4px;margin-bottom: 32px;"></div>
     <div class="oc-area-limit">
@@ -1077,7 +1125,7 @@
     <hr style="margin: 56px 0;">
 
     <h3 class="oc-center">Bootstrap Icons</h3>
-    <div class="oc-center" style="margin-bottom: 56px;">Design by William77. 2024</div>
+    <div class="oc-center" style="margin-bottom: 56px;">Design by Bootstrap.</div>
 
 
   </div>

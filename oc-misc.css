@@ -59,6 +59,10 @@ hr {
     border-top: .1px solid #666;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 .oc-cross {
     background: linear-gradient(to top right,
             transparent 49.9%,
