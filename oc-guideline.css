@@ -138,17 +138,17 @@ h6 {font-size: 13px;}
 .oc-bs-other1 {box-shadow:0px 0px 10px var(--oc-color-other1);}
 .oc-bs-other2 {box-shadow:0px 0px 10px var(--oc-color-other2);}
 .oc-bs-other3 {box-shadow:0px 0px 10px var(--oc-color-other3);}
-.oc-bs-0 {box-shadow:0px 0px 0px black;}
-.oc-bs-10 {box-shadow:0px 0px 2px black;}
-.oc-bs-20 {box-shadow:0px 0px 4px black;}
-.oc-bs-30 {box-shadow:0px 0px 6px black;}
-.oc-bs-40 {box-shadow:0px 0px 8px black;}
-.oc-bs-50 {box-shadow:0px 0px 10px black;}
-.oc-bs-60 {box-shadow:0px 0px 12px black;}
-.oc-bs-70 {box-shadow:0px 0px 14px black;}
-.oc-bs-80 {box-shadow:0px 0px 16px black;}
-.oc-bs-90 {box-shadow:0px 0px 18px black;}
-.oc-bs-100 {box-shadow:0px 0px 20px black;}
+.oc-bs-c0 {box-shadow:0px 0px 0px black;}
+.oc-bs-c10 {box-shadow:0px 0px 2px black;}
+.oc-bs-c20 {box-shadow:0px 0px 4px black;}
+.oc-bs-c30 {box-shadow:0px 0px 6px black;}
+.oc-bs-c40 {box-shadow:0px 0px 8px black;}
+.oc-bs-c50 {box-shadow:0px 0px 10px black;}
+.oc-bs-c60 {box-shadow:0px 0px 12px black;}
+.oc-bs-c70 {box-shadow:0px 0px 14px black;}
+.oc-bs-c80 {box-shadow:0px 0px 16px black;}
+.oc-bs-c90 {box-shadow:0px 0px 18px black;}
+.oc-bs-c100 {box-shadow:0px 0px 20px black;}
 .oc-bs-inset-primary1 {box-shadow:inset 0px 0px 10px var(--oc-color-primary1);}
 .oc-bs-inset-primary2 {box-shadow:inset 0px 0px 10px var(--oc-color-primary2);}
 .oc-bs-inset-primary3 {box-shadow:inset 0px 0px 10px var(--oc-color-primary3);}
