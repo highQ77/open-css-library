@@ -11,6 +11,7 @@
     @import url(./oc-layout.css);
     @import url(./oc-guideline.css);
     @import url(./oc-misc.css);
+    @import url(./bootstrap-icons/font/bootstrap-icons.min.css);
 
     body {
       font-family: system-ui;
@@ -1037,15 +1038,60 @@
 
   </div>
   <div class="river"></div>
+  <div id="oc-icons">
+
+    <div style="background-color: #979179;height: 4px;margin-bottom: 32px;"></div>
+    <div class="oc-area-limit">
+      <h1>Bootstrap Icons</h1>
+      <h4>bootstrap-icons.css - power by Bootstrap</h4>
+    </div>
+
+    <hr>
+
+    <div class="oc-area-limit">
+      <textarea class="oc-bg-other3 oc-text-c100 oc-opacity-100 oc-bs-inset-c10">
+        <i class="bi bi-{icon-name}"></i>
+      </textarea>
+      <input type="text" placeholder="search icon-name"
+        onkeyup="setIcons(iconsResult.filter(i=>i.indexOf(this.value)>-1))" />
+    </div>
+    <div id="icons-container" class="oc-area-limit">
+    </div>
+
+    <script>
+      let iconsResult
+      fetch('./bootstrapIcons.json').then(r => r.json()).then(r => {
+        iconsResult = r
+        setIcons(iconsResult)
+      })
+      function setIcons(r) {
+        let iconStr = '<div class="oc-area">'
+        r.forEach(r => {
+          iconStr += `<div class="icon-item oc-middle" style="background:transparent; width: calc(100% / 6); max-width: calc(100% / 5 - 5px);"><i class="bi bi-${r} oc-fs-18 oc-mr-4"></i>${r}</div>`
+        })
+        iconStr += '</div>'
+        document.getElementById('icons-container').innerHTML = iconStr
+      }
+    </script>
+
+    <hr style="margin: 56px 0;">
+
+    <h3 class="oc-center">Bootstrap Icons</h3>
+    <div class="oc-center" style="margin-bottom: 56px;">Design by William77. 2024</div>
+
+
+  </div>
+
+  <div class="river"></div>
 
   <script>
-      // [ Format Textarea ] ===============================================================
-      ;[...document.getElementsByTagName('textarea')].forEach(tt => {
-        let s = tt.value.indexOf('<')
-        let t = tt.value.split('\n').map(item => item.slice(s)).filter(item => item != '')
-        tt.rows = t.length
-        tt.value = t.join('\n')
-      })
+    // [ Format Textarea ] ===============================================================
+    ;[...document.getElementsByTagName('textarea')].forEach(tt => {
+      let s = tt.value.indexOf('<')
+      let t = tt.value.split('\n').map(item => item.slice(s)).filter(item => item != '')
+      tt.rows = t.length
+      tt.value = t.join('\n')
+    })
   </script>
 
   <div class="oc-pos-fixed oc-right oc-p-8 oc-pr-0" style="right:0px; top:0px; width: 100vw;">
