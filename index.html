@@ -505,15 +505,18 @@
     }
     init()
 
-    function downloadCSS() {
-      var filename = 'oc-guideline.css'
+    function download(filename, content) {
       const link = document.createElement('a');
-      const file = new Blob([generateCSS()], { type: 'text/plain' });
+      const file = new Blob([content], { type: 'text/plain' });
       link.setAttribute('href', URL.createObjectURL(file));
       link.setAttribute('download', filename);
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
+    }
+
+    function downloadCSS() {
+      download('oc-guideline.css', generateCSS())
     }
 
     function generateCSS() {
@@ -588,35 +591,35 @@
 
       // .oc-text-shadow-[color name]
       colorKeys.forEach(key => {
-        cssStr += `.oc-text-shadow-${key} {text-shadow:0px 0px 1px var(--oc-color-${key});}\r\n`
+        cssStr += `.oc-ts-${key} {text-shadow:0px 0px 1px var(--oc-color-${key});}\r\n`
       })
 
       // text-shadow
       Array(11).fill(0).forEach((_, index, arr) => {
         let cv = 20 * index / (arr.length - 1)
-        cssStr += `.oc-text-shadow-${index * 10} {text-shadow:0px 0px ${cv}px black;}\r\n`
+        cssStr += `.oc-ts-${index * 10} {text-shadow:0px 0px ${cv}px black;}\r\n`
       })
 
-      // .oc-box-shadow-[color name]
+      // .oc-bs-[color name]
       colorKeys.forEach(key => {
-        cssStr += `.oc-box-shadow-${key} {box-shadow:0px 0px 10px var(--oc-color-${key});}\r\n`
+        cssStr += `.oc-bs-${key} {box-shadow:0px 0px 10px var(--oc-color-${key});}\r\n`
       })
 
       // box-shadow
       Array(11).fill(0).forEach((_, index, arr) => {
         let cv = 20 * index / (arr.length - 1)
-        cssStr += `.oc-box-shadow-${index * 10} {box-shadow:0px 0px ${cv}px black;}\r\n`
+        cssStr += `.oc-bs-${index * 10} {box-shadow:0px 0px ${cv}px black;}\r\n`
       })
 
       // .oc-box-shadow-[color name]
       colorKeys.forEach(key => {
-        cssStr += `.oc-box-shadow-inset-${key} {box-shadow:inset 0px 0px 10px var(--oc-color-${key});}\r\n`
+        cssStr += `.oc-bs-inset-${key} {box-shadow:inset 0px 0px 10px var(--oc-color-${key});}\r\n`
       })
 
       // box-shadow-inset
       Array(11).fill(0).forEach((_, index, arr) => {
         let cv = 20 * index / (arr.length - 1)
-        cssStr += `.oc-box-shadow-inset-${index * 10} {box-shadow:inset 0px 0px ${cv}px black;}\r\n`
+        cssStr += `.oc-bs-inset-c${index * 10} {box-shadow:inset 0px 0px ${cv}px black;}\r\n`
       })
 
 
@@ -628,7 +631,7 @@
       // .oc-text-0, .oc-text-10, .oc-text-20 ~ .oc-text-100
       Array(11).fill(0).forEach((_, index, arr) => {
         let cv = 255 * index / (arr.length - 1)
-        cssStr += `.oc-text-${index * 10} {color:rgba(${cv},${cv},${cv},1);}\r\n`
+        cssStr += `.oc-text-c${index * 10} {color:rgba(${cv},${cv},${cv},1);}\r\n`
       })
 
       // .oc-bg-[color name]
@@ -639,7 +642,7 @@
       // .oc-bg-0, .oc-bg-10, .oc-bg-20 ~ .oc-bg-100
       Array(11).fill(0).forEach((_, index, arr) => {
         let cv = 255 * index / (arr.length - 1)
-        cssStr += `.oc-bg-${index * 10} {background-color:rgba(${cv},${cv},${cv},1);}\r\n`
+        cssStr += `.oc-bg-c${index * 10} {background-color:rgba(${cv},${cv},${cv},1);}\r\n`
       })
 
       // border - .oc-bd-[color name]
@@ -953,6 +956,21 @@
 
     <hr style="margin: 56px 0;">
 
+    <div class="oc-area-limit">
+      <div class="oc-fs-14 oc-my-40">★ progress bar</div>
+      <div class="oc-p-2 oc-bd-1 oc-bd-other3 oc-bd-radius-10">
+        <div class="oc-center oc-bg-other3 oc-text-c100 oc-bs-inset-c10 oc-bd-radius-10 oc-fs-11" style="width: 66%;">
+          66%</div>
+      </div>
+      <textarea>
+        <div class="oc-p-2 oc-bd-1 oc-bd-other3 oc-bd-radius-10">
+          <div class="oc-center oc-bg-other3 oc-text-c100 oc-bs-inset-c10 oc-bd-radius-10 oc-fs-11" style="width: 66%;">66%</div>
+        </div>
+      </textarea>
+    </div>
+
+    <hr style="margin: 56px 0;">
+
 
     <h3 class="oc-center">Components</h3>
     <div class="oc-center" style="margin-bottom: 56px;">Design by William77. 2024</div>
@@ -970,6 +988,21 @@
         tt.value = t.join('\n')
       })
   </script>
+
+  <div class="oc-pos-fixed oc-right oc-p-8 oc-pr-0" style="right:0px; top:0px; width: 100vw;">
+    <button style="padding: 4px 16px;" onclick="downloadOpenCssLibrary()">download
+      all-in-one.css</button>
+  </div>
+  <script>
+    async function downloadOpenCssLibrary() {
+      let s = await (await fetch('./oc-layout.css')).text()
+      s += generateCSS()
+      s += await (await fetch('./oc-misc.css')).text()
+      download('all-in-one.css', s)
+    }
+  </script>
+
+
 </body>
 
 </html>
