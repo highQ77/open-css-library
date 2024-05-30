@@ -169,7 +169,41 @@
 
     <!-- example2 -->
     <div class="oc-area-limit p">
-      ★ example2 - custom distribution / 自定義分配
+      ★ example2 - self-manual distribution / 半自動分配
+    </div>
+    <div class="oc-area oc-area-limit oc-split-4">
+      <div>A</div>
+      <div>B</div>
+      <div>C</div>
+      <div>D</div>
+      <div>E</div>
+      <div>F</div>
+      <div>G</div>
+      <div>H</div>
+      <div>I</div>
+      <div>J</div>
+    </div>
+
+    <div class="oc-area-limit">
+      <textarea>
+        <div class="oc-area oc-area-limit oc-split-4">
+          <div>A</div>
+          <div>B</div>
+          <div>C</div>
+          <div>D</div>
+          <div>E</div>
+          <div>F</div>
+          <div>G</div>
+          <div>H</div>
+          <div>I</div>
+          <div>J</div>
+        </div>
+      </textarea>
+    </div>
+
+    <!-- example3 -->
+    <div class="oc-area-limit p">
+      ★ example3 - custom distribution / 自定義分配
     </div>
     <div class="oc-area oc-area-limit">
       <div class="oc-1">1/12</div>
@@ -187,9 +221,9 @@
     </textarea>
     </div>
 
-    <!-- example3 -->
+    <!-- example4 -->
     <div class="oc-area-limit p">
-      ★ example3 - split 12 parts / 12欄分配
+      ★ example4 - split 12 parts / 12欄分配
     </div>
     <div class="oc-area oc-area-limit">
       <div class="oc-1">1/12</div>
@@ -225,9 +259,9 @@
     </textarea>
     </div>
 
-    <!-- example4 -->
+    <!-- example5 -->
     <div class="oc-area-limit p">
-      ★ example4 - rwd settings / 響應式設計
+      ★ example5 - rwd settings / 響應式設計
     </div>
     <div class="oc-area oc-area-limit">
       <div class="oc-sm-12 oc-md-6 oc-lg-4">oc-sm-12 oc-md-6 oc-lg-4</div>
@@ -245,9 +279,9 @@
     </textarea>
     </div>
 
-    <!-- example5 -->
+    <!-- example6 -->
     <div class="oc-area-limit p">
-      ★ example5 - alignment / 對齊
+      ★ example6 - alignment / 對齊
     </div>
     <div class="oc-area oc-area-limit">
       <div class="oc-center" style="height:120px">oc-center</div>
@@ -273,9 +307,9 @@
     </textarea>
     </div>
 
-    <!-- example6 -->
+    <!-- example7 -->
     <div class="oc-area-limit p">
-      ★ example6 - custom width / 自定義欄寬
+      ★ example7 - custom width / 自定義欄寬
     </div>
     <div class="oc-area oc-area-limit">
       <div style="max-width: 200px;">200px</div>
@@ -293,9 +327,9 @@
     </textarea>
     </div>
 
-    <!-- example7 -->
+    <!-- example8 -->
     <div class="oc-area-limit p">
-      ★ example7 - nest structure / 巢狀結構
+      ★ example8 - nest structure / 巢狀結構
     </div>
     <div class="oc-area oc-area-limit">
       <div class="oc-area oc-6">
@@ -1114,9 +1148,9 @@
         setIcons(iconsResult)
       })
       function setIcons(r) {
-        let iconStr = '<div class="oc-area">'
+        let iconStr = '<div class="oc-area oc-split-4">'
         r.forEach(r => {
-          iconStr += `<div class="icon-item oc-middle" style="background:transparent; width: calc(100% / 6); max-width: calc(100% / 5 - 5px);"><i class="bi bi-${r} oc-fs-18 oc-mr-4"></i>${r}</div>`
+          iconStr += `<div class="icon-item oc-middle oc-p-4" style="background:transparent;"><i class="bi bi-${r} oc-fs-18 oc-mr-4"></i>${r}</div>`
         })
         iconStr += '</div>'
         document.getElementById('icons-container').innerHTML = iconStr

@@ -84,6 +84,7 @@ html *:after {
     align-items: flex-end;
 }
 
+/* 自動分配 */
 .oc-area>*:first-child:nth-last-child(1) {
     /* -or- li:only-child { */
     width: 100%;
@@ -153,6 +154,62 @@ html *:after {
 .oc-area>*:first-child:nth-last-child(12)~* {
     width: calc((100% - var(--oc-layout-gutter) * 11) / 12);
     --gutter-fix: var(--oc-layout-gutter) / 12;
+}
+
+/* 手動分配 */
+.oc-split-2>* {
+    width: calc((100% - var(--oc-layout-gutter) * 1) / 2) !important;
+    flex-grow: 0;
+}
+
+.oc-split-3>* {
+    width: calc((100% - var(--oc-layout-gutter) * 2) / 3) !important;
+    flex-grow: 0;
+}
+
+.oc-split-4>* {
+    width: calc((100% - var(--oc-layout-gutter) * 3) / 4) !important;
+    flex-grow: 0;
+}
+
+.oc-split-5>* {
+    width: calc((100% - var(--oc-layout-gutter) * 4) / 5) !important;
+    flex-grow: 0;
+}
+
+.oc-split-6>* {
+    width: calc((100% - var(--oc-layout-gutter) * 5) / 6) !important;
+    flex-grow: 0;
+}
+
+.oc-split-7>* {
+    width: calc((100% - var(--oc-layout-gutter) * 6) / 7) !important;
+    flex-grow: 0;
+}
+
+.oc-split-8>* {
+    width: calc((100% - var(--oc-layout-gutter) * 7) / 8) !important;
+    flex-grow: 0;
+}
+
+.oc-split-9>* {
+    width: calc((100% - var(--oc-layout-gutter) * 8) / 9) !important;
+    flex-grow: 0;
+}
+
+.oc-split-10>* {
+    width: calc((100% - var(--oc-layout-gutter) * 9) / 10) !important;
+    flex-grow: 0;
+}
+
+.oc-split-11>* {
+    width: calc((100% - var(--oc-layout-gutter) * 10) / 11) !important;
+    flex-grow: 0;
+}
+
+.oc-split-12>* {
+    width: calc((100% - var(--oc-layout-gutter) * 11) / 12) !important;
+    flex-grow: 0;
 }
 
 @media (max-width: 576px) {
