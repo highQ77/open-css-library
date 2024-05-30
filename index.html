@@ -169,7 +169,7 @@
 
     <!-- example2 -->
     <div class="oc-area-limit p">
-      ★ example2 - self-manual distribution / 半自動分配
+      ★ example2 - semi-manual distribution / 半自動分配
     </div>
     <div class="oc-area oc-area-limit oc-split-4">
       <div>A</div>
@@ -1169,12 +1169,15 @@
 
   <script>
     // [ Format Textarea ] ===============================================================
-    ;[...document.getElementsByTagName('textarea')].forEach(tt => {
-      let s = tt.value.indexOf('<')
-      let t = tt.value.split('\n').map(item => item.slice(s)).filter(item => item != '')
-      tt.rows = t.length
-      tt.value = t.join('\n')
-      tt.style.overflow = 'scroll'
+    window.addEventListener('resize', () => {
+      ;[...document.getElementsByTagName('textarea')].forEach(tt => {
+        let s = tt.value.indexOf('<')
+        let t = tt.value.split('\n').map(item => item.slice(s)).filter(item => item != '')
+        tt.style.height = 0
+        tt.style.height = tt.scrollHeight + 'px'
+        tt.value = t.join('\n')
+        tt.style.overflow = 'scroll'
+      })
     })
   </script>
 
