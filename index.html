@@ -1171,7 +1171,7 @@
     // [ Format Textarea ] ===============================================================
     let winResize = () => {
       ;[...document.getElementsByTagName('textarea')].forEach(tt => {
-        let s = tt.value.indexOf('<')
+        let s = tt.value.trimEnd().indexOf('<')
         let t = tt.value.split('\n').map(item => item.slice(s)).filter(item => item != '')
         tt.style.height = 0
         tt.style.height = tt.scrollHeight + 'px'
@@ -1179,8 +1179,9 @@
         tt.style.overflow = 'scroll'
       })
     }
-    window.onload = winResize;
+    winResize()
     window.addEventListener('resize', winResize)
+    window.addEventListener('DOMContentLoaded', winResize)
   </script>
 
   <div class="oc-pos-fixed oc-p-8" style="right:0px; top:0px;">
