@@ -7,6 +7,10 @@ demo url
 
 https://highq77.github.io/open-css-library/
 
+blog design sample
+
+https://highq77.github.io/open-css-library/layout/blog.html
+
 project url
 
 https://github.com/highQ77/open-css-library
